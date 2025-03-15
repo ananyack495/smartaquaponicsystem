@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Data Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sensor Data Dashboard</h1>
+      <p>Real-time monitoring of temperature, pH, and water level</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Temperature</h2>
+        <p class="value" id="temperature">-- °C</p>
+      </div>
+
+      <div class="card">
+        <h2>pH Level</h2>
+        <p class="value" id="ph">--</p>
+      </div>
+
+      <div class="card">
+        <h2>Water Level</h2>
+        <p class="value" id="water-level">-- cm</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Developed by Ananya ck | Electronics & Communication Engineering</p>
+    </footer>
+  </div>
+
+  <script>
+    function updateSensorData() {
+     //example data
+      document.getElementById('temperature').textContent = '25 °C';
+      document.getElementById('ph').textContent = '7.0';
+      document.getElementById('water-level').textContent = '50 cm';
+    }
+
+    // Update sensor data every 2 seconds (for demo purposes)
+    setInterval(updateSensorData, 2000);
+    updateSensorData(); // Initial call
+  </script>
+</body>
+</html>
